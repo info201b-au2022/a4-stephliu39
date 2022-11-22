@@ -1,45 +1,64 @@
 ---
-title: "Your A4 Report Title (TODO: Revise title)"
-author: "Your Name"
-date: '2022-11-01'
+title: "Male vs. Female Prison Populations: How have they changed with incarceration rates in the U.S.?"
+author: "Stephanie Liu"
+date: '2022-11-21'
 output: html_document
 ---
 
-```{r echo=FALSE, eval=TRUE, message=FALSE}
-source("../source/a4-helpers.R")
-source("../source/analysis.R")
+```{r echo=FALSE, message=FALSE}
+source("C:/Users/steph/Documents/info201/assignments/a4-stephliu39/source/analysis.R")
 ```
 
 ## Abstract 
-[TODO: Include a short abstract (about 50 words)]
 
-# Test (TODO: Remove before submission!!)
-```{r echo=FALSE}
-q1_string <- test_query1()
-num <- 5
-```
-As you know, this is a markdown report. The [R Markdown Cheatsheet](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf) is **useful!**
-
-* Here's a test of a dynamic variable. Say **"`r q1_string`!!!** 
-* Here's another test. A vector
-of numbers: `r test_query2(num)`.
-
-Recall that _{r echo=TRUE}_ can be used to display the code, 
-which is very useful when developing and debugging a report. Here's an example: 
-
-```{r echo=TRUE}
-num <- 5
-sum <- sum(test_query2(num))
-print(sum)
-```
+This project will be looking over trends in incarceration rates in the U.S. Five different figures and charts will be used to analyze the any changes in incarceration trends. Furthermore, the figures and charts will be used to reveal any potential inequalities found in the incarceration trends.
 
 ## Introduction 
-[TODO]
+
+This project was created to reveal potential inequalities found in incarceration rates across the United States. Many of these inequities are a result of many different factors, such as the issues that come with racism and sexism within our society. This data could impact the people who identify as certain groups that are discriminated against, people who identify as a certain gender or race, as well as those who are currently incarcerated. This data could also be used by researchers and journalists who want to use this data to help spread awareness about certain issues surrounding incarceration rates in the U.S. The questions that I will be answering in this report are:
+
+- How have incarceration rates changed in the United States over time?
+- What is the difference between the number of men and the number of women in jail?
+- What is the ratio of the male and female jail populations?
 
 ## Data Summary 
-[TODO]
+The number of females in prison is: `female_population()`. The number of males in prison is: `male_population()`. The difference between the two is `difference_population()`. The small difference shows that the number of males and females in prison is fairly proportional.
 
-[TODO ... other sections ... See Canvas for details]
+## Growth of the U.S. Prison Population
 
-_All the very best with your work!_
+```{r echo=FALSE}
+plot_jail_pop_for_us()
+```
+
+In this chart, we can see that incarceration rates in the U.S. have generally increased over time. Incarceration rates seemed to have peaked sometime between the years 2000 and 2010, and incarceration rates were at the lowest sometime between the years 1970 and 1980. This increase may have been the result of various factors, such as an overall increase in the US population.
+
+## Growth of Prison Population by State
+
+```{r echo=FALSE}
+plot_jail_pop_by_states(c("WA", "OR", "CA"))
+```
+
+In this chart, we can see how prison populations have changed for a few specific states. In this case, we can see that for California, the prison population peaked sometime between 2010 and 2015. For Oregon, the prison population seems to peak sometime between 2005 and 2010. Finally, in Washington, the prison population seems to have peaked sometime between 2000 and 2005.
+
+## Section 5: Jail Population by Gender
+
+```{r echo=FALSE}
+gender_plot()
+```
+
+In this chart, we can see that male and female prison populations are represented fairly proportionally across the United States. The data seems fairly linear, with very little outliers. 
+
+## Section 6: Distribution of Jail Population by Gender
+
+```{r echo=FALSE}
+plot_female()
+plot_male()
+```
+
+These maps show the distribution of male and female prison populations by State. Through these maps, we can determine that male and female prison populations are fairly proportional, both maps have the majority of the data falling under the same ratio of males or females in prison.
+
+
+
+
+
 
